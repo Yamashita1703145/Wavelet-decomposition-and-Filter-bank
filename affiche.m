@@ -1,17 +1,17 @@
-function h=affiche(img);
+function h=affiche(b)
 %Affichage d'une image
 %Display the image
 
-if (size(img,3)==1)
+if (size(b,3)==1)
 %clf;
-if ((img(1,1)==21) & (img(2,2)==21))
-   h=image(img);
+if ((b(1,1)==21) && (b(2,2)==21))
+   h=image(b);
 else
-   h=imagesc(img);
-end;
+   h=imagesc(b);
+end
 colormap(gray);
 else
-   img=img-min(min(min(img)));
-   img=img/max(max(max(img)));
-   imagesc(img);
-   end;
+   b=b-min(min(min(b)));
+   b=b/max(max(max(b)));
+   imagesc(b);
+end
